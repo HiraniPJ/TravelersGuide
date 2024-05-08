@@ -26,3 +26,20 @@
 .hamburger .bottom{
     bottom: 0;
 }
+
+/* Animation for opening the menu */
+#menu-toggler:checked + .hamburger .top {
+    transform: rotate(45deg);
+    top: 50%;
+    transform-origin: top left;
+}
+
+#menu-toggler:checked + .hamburger .middle {
+    opacity: 0;
+}
+
+#menu-toggler:checked + .hamburger .bottom {
+    transform: rotate(-45deg);
+    bottom: 50%;
+    transform-origin: bottom left;
+}
