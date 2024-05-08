@@ -38,6 +38,7 @@ header {
 .navbar .all-links {
     display: flex;
     align-items: center;
+    transition: left 0.3s ease-out, background-color 0.3s linear;
 }
 
 .navbar .all-links li {
@@ -76,6 +77,7 @@ header a, footer a {
     cursor: pointer;
     width: 30px;
     position: relative;
+    z-index: 6;
 }
 
 .hamburger .top { 
@@ -108,19 +110,31 @@ header a, footer a {
     transform-origin: bottom left;
 }
 
-/*Image Carousel for Index page*/
-.image-carousel div {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 800px;
-    overflow: hidden;
-    position: relative;
+#menu-toggler:checked ~ .all-links {
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
 }
 
-.image-carousel img {
-    width: 100%;
-    display: block;
+/*Image Carousel and Team Slideshow*/
+.image-carousel, .team-slideshow {
+  position: relative;
+  height: 450px;
 }
+
+.image-carousel img, .team-slideshow img {
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  height: 100%;
+}
+
+.image-carousel img:first-child, .team-slideshow img:first-child {
+  opacity: 1;
+}
+
 /*Service page cards style*/
 .cards {
     display: flex;
@@ -379,12 +393,11 @@ footer span {
     .navbar .all-links {
       position: fixed;
       left: -100%;
-      width: 300px;
+      width: 75%;
       display: block;
       height: 100vh;
-      top: 75px;
+      top: 0;
       background: #333;
-      transition: left 0.3s ease;
     }
   
     .navbar #menu-toggler:checked ~ .all-links {
