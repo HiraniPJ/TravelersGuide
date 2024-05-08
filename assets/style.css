@@ -143,6 +143,13 @@ header {
     background: #555;
 }
 
+/*Portfolio page*/
+.video-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    margin-bottom: 20px;
+}
 
 /*Main Footer*/
 footer {
