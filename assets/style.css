@@ -6,3 +6,23 @@
     width: auto;
     vertical-align: middle;
 }
+/*hamburger button*/
+.hamburger{
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    position: relative;
+}
+
+.hamburger .top{
+    top: 0;
+}
+
+.hamburger .middle{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger .bottom{
+    bottom: 0;
+}
