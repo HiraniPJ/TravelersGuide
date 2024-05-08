@@ -95,6 +95,7 @@ header {
     bottom: 50%;
     transform-origin: bottom left;
 }
+
 /*Image Carousel for Index page*/
 .image-carousel div {
     margin: 0 auto;
@@ -107,6 +108,39 @@ header {
 .image-carousel img {
     width: 100%;
     display: block;
+}
+/*Service page cards style*/
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 10px;
+    width: calc(33.333% - 20px);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.card a:hover {
+    background: #555;
 }
 
 
