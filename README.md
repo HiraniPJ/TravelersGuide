@@ -1,7 +1,7 @@
-Introduction
-The Kyoto Traveler's Guide website is designed to offer detailed and engaging information about Kyoto, Japan. It aims to serve both first-time and repeat visitors looking to explore the city's rich history, culture, and landscapes through organized tours, cultural experiences, and comprehensive travel planning.
+<h1>Kyoto Traveler's Guide<h1>
+<p>The Kyoto Traveler's Guide website is designed to offer detailed and engaging information about Kyoto, Japan. It aims to serve both first-time and repeat visitors looking to explore the city's rich history, culture, and landscapes through organized tours, cultural experiences, and comprehensive travel planning.<p>
 
-Use Case
+<h2>Use Case</h2>
 Target Audience: Tourists planning to visit Kyoto, travel agencies, and cultural enthusiasts.
 Objective: Provide an intuitive and informative platform for users to explore the services offered, gain insights about Kyoto, and contact the service provider for personalized travel arrangements.
 Features
