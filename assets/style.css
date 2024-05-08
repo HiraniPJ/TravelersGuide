@@ -43,3 +43,23 @@
     bottom: 50%;
     transform-origin: bottom left;
 }
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #000;
+    padding: 20px 0;
+}
+
+footer div{
+    padding: 0 10px;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer span{
+    color: #fff;
+}
