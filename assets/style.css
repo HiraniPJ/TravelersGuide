@@ -25,7 +25,7 @@ header {
     justify-content: center;
     background: #333;
 }
-
+/*navigation bar*/
 .navbar {
     display: flex;
     padding: 0 10px;
@@ -56,6 +56,8 @@ header {
     width: auto;
     vertical-align: middle;
 }
+
+
 /*hamburger button*/
 .hamburger {
     display: block;
@@ -93,7 +95,22 @@ header {
     bottom: 50%;
     transform-origin: bottom left;
 }
+/*Image Carousel for Index page*/
+.image-carousel div {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    position: relative;
+}
 
+.image-carousel img {
+    width: 100%;
+    display: block;
+}
+
+
+/*Main Footer*/
 footer {
     width: 100%;
     display: flex;
