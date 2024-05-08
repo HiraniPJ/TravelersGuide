@@ -57,6 +57,18 @@ header {
     vertical-align: middle;
 }
 
+header a, footer a {
+    text-decoration: none;
+    color: #fff;
+    height: 100%;
+    padding: 20px 0;
+    display: inline-block;
+  }
+
+  header a:hover, footer a:hover {
+    color: #ddd;
+  }
+
 
 /*hamburger button*/
 .hamburger {
@@ -151,6 +163,195 @@ header {
     margin-bottom: 20px;
 }
 
+.homepage {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: url("images/home-bg.jpg"); /* Placeholder for a background image related to Kyoto */
+    background-position: center 65%;
+    background-size: cover;
+  }
+  
+  .homepage::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Dark overlay to enhance text visibility */
+  }
+  
+  .homepage .content {
+    display: flex;
+    height: 85%;
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .homepage .content h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .homepage .content .text {
+    margin-bottom: 50px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
+  }
+  
+  .content a {
+    color: #000;
+    display: block;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0 10px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background: #fff;
+    border: 2px solid #fff;
+    transition: 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Smooth transition for hover effects */
+    text-decoration: none;
+  }
+  
+  .content a:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.3); /* Transition to a translucent background on hover */
+  }
+  
+  section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 0 0;
+  }
+  
+  section h2 {
+    font-size: 2rem; /* Consistent font size for section headers */
+  }
+  
+  section > p {
+    text-align: center; /* Center-align text for better readability */
+  }
+  
+  section .cards {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-top: 50px;
+    padding: 0 10px;
+    justify-content: space-between;
+  }
+  
+  section.about, section.portfolio, section.services, section.contact {
+    margin: 0 auto;
+    max-width: 1200px; /* Centralize sections for a structured look */
+  }
+  
+  .about .company-info, .about .mission-vision {
+    margin-top: 30px;
+  }
+  
+  .about h3, .portfolio h3, .services h3, .contact h3 {
+    margin: 30px 0 10px; /* Spacing around headers for visual separation */
+  }
+  
+  .about, .portfolio .cards, .services .cards {
+    padding-left: 20px; /* Padding for lists within about section */
+  }
+  
+  .contact .row, .about .row, .portfolio .row, .services .row {
+    padding: 0 10px; /* Padding for rows within sections */
+  }
+  
+  .contact .row .col, .about .row .col, .portfolio .row .col, .services .row .col {
+    padding: 0 10px;
+    width: calc(100% / 2 - 50px); /* Responsive column widths */
+  }
+  
+  .contact .col p, .about .col p, .portfolio .col p, .services .col p {
+    margin-bottom: 10px; /* Margin for paragraph elements */
+  }
+
+  /* Interactive Map */
+  #map iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+  }
+  
+  /* Form Styling */
+  .contact-form form {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .contact-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #555;
+  }
+  
+  /* Slideshow Styles */
+  .team-slideshow {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .team-slideshow div {
+    text-align: center;
+  }
+  
+  .team-slideshow img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .contact form input, .contact form textarea {
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #bfbfbf; /* Styling for form inputs */
+  }
+  
+  .contact form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 17px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #333;
+    transition: 0.2s ease; /* Button styling with transition */
+  }
+  
+  .contact form button:hover {
+    background: #525252; /* Darker background on hover */
+  }
+  
+
 /*Main Footer*/
 footer {
     width: 100%;
@@ -171,3 +372,42 @@ footer div {
 footer span {
     color: #fff;
 }
+
+
+@media screen and (max-width: 860px) {
+    /* Responsive styles for mobile devices */
+    .navbar .all-links {
+      position: fixed;
+      left: -100%;
+      width: 300px;
+      display: block;
+      height: 100vh;
+      top: 75px;
+      background: #333;
+      transition: left 0.3s ease;
+    }
+  
+    .navbar #menu-toggler:checked ~ .all-links {
+      left: 0; /* Mobile menu sliding in */
+    }
+  
+    .navbar #hamburger-btn {
+      display: block; /* Display hamburger button on mobile */
+    }
+  
+    section > p, .homepage .content .text, .content a {
+      text-align: center;
+      font-size: smaller; /* Adjust text sizing for readability on smaller screens */
+    }
+  
+    section .cards .card, .contact .row .col, footer a {
+      width: 100%; /* Full width elements on smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 560px) {
+    /* Adjustments for very small screens */
+    section .cards .card {
+      margin-bottom: 30px; /* Increased margin for clarity */
+    }
+  }
