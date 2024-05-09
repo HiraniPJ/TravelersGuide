@@ -44,6 +44,12 @@ header {
   max-width: 1200px;
   margin: auto;
 }
+
+.logo img {
+  height: 70px;
+  width: auto;
+}
+/*
 .navbar .hamburger {
   display: none;
   background: none;
@@ -57,33 +63,33 @@ header {
   display: flex;
   align-items: center;
 }
+*/
 
 .navbar .nav-links ul {
   display: flex;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar .nav-links ul li a {
   color: #fff;
-  padding: 10px;
+  padding: 10px 15px;
   text-decoration: none;
+  font-size: 16px;
 }
 
 .navbar .nav-links ul li a:hover {
-  text-decoration: underline;
+  background-colour: #505050;
 }
-
+/*
 .navbar .logo {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 20px;
-}
-.logo img {
-  height: 70px;
-  width: auto;
-  transition: width 0.3s ease-in-out;
-}
+}*/
+
 
 /*
 header a, footer a {
@@ -410,15 +416,22 @@ footer {
   background: #000;
   color: #fff;
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
   position: relative;
   bottom: 0;
   width: 100%;
 }
 
+footer .footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
 footer .footer-content a {
   color: #fff;
-  padding: 0 10px;
+  padding: 0 15px;
   text-decoration: none;
 }
 
@@ -428,7 +441,11 @@ footer .footer-content a:hover {
 
 
 @media (max-width: 768px) {
-  .navbar .hamburger {
+  header {
+    padding: 5px 10px;
+  }
+  
+   .navbar .hamburger {
       display: block;
   }
 
@@ -442,29 +459,35 @@ footer .footer-content a:hover {
       flex-direction: column;
       align-items: flex-start;
   }
-
+/*
   .navbar .nav-links ul {
       width: 100%;
-  }
+  }*/
 
   .navbar .nav-links ul li {
-      width: 100%;
       text-align: center;
   }
 
   .navbar .nav-links ul li a {
       display: block;
       width: 100%;
-      padding: 10px;
   }
   
-  .navbar .logo {
+ /*.navbar .logo {
     margin-right: 0;
     flex-grow: 1;
   }
 
   .logo img {
     width: 100px;
+  }*/
+
+    .image-carousel, .team-slideshow {
+      height: auto;
+  }
+
+  .image-carousel img, .team-slideshow img {
+      position: relative;  
   }
 }
 
@@ -475,12 +498,3 @@ footer .footer-content a:hover {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .image-carousel, .team-slideshow {
-      height: auto;
-  }
-
-  .image-carousel img, .team-slideshow img {
-      position: relative;  
-  }
-}
