@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             slides[currentSlide].style.opacity = 1;
         }, interval);
     };
-
+    //initialize carousels
     const imageCarousel = document.querySelector('.image-carousel');
     const teamSlideshow = document.querySelector('.team-slideshow');
 
@@ -22,4 +22,17 @@ document.addEventListener('DOMContentLoaded', function() {
         switchSlide(teamSlideshow, 3000);
     }
 
+    //hamburger Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function() {
+            if (navLinks.style.display === 'block') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'block';
+            }
+        });
+    }
 });
