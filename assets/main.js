@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const switchSlide = (container, interval) => {
         let slides = container.querySelectorAll('img');
+        if (slides.length === 0) return;
         let currentSlide = 0;
         setInterval(() => {
             slides[currentSlide].style.opacity = 0;
