@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let slides = container.querySelectorAll('img');
         if (slides.length === 0) return;
         let currentSlide = 0;
+        slides[currentSlide].style.opacity = 1;
         setInterval(() => {
             slides[currentSlide].style.opacity = 0;
             currentSlide = (currentSlide + 1) % slides.length;
