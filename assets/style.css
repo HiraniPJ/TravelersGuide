@@ -81,7 +81,7 @@ header {
 }
 
 .navbar .nav-links ul li a:hover {
-  background-colour: #505050;
+  background-colour: #868686;
 }
 /*
 .navbar .logo {
@@ -368,7 +368,7 @@ section.about, section.portfolio, section.services, section.contact {
   background-color: #555;
 }
 
-/* Slideshow Styles 
+ Slideshow Styles 
 .team-slideshow {
   max-width: 800px;
   margin: 20px auto;
@@ -381,7 +381,7 @@ section.about, section.portfolio, section.services, section.contact {
 .team-slideshow img {
   max-width: 100%;
   height: auto;
-}*/
+}
 
 .contact form input, .contact form textarea {
   padding: 10px;
