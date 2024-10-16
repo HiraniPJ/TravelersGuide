@@ -81,13 +81,14 @@ header {
 }
 
 .navbar .nav-links ul li a:hover {
-  background-colour: #868686;
+  background-color: #868686;
 }
 /*
 .navbar .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;+
+  
   margin-right: 20px;
 }*/
 
