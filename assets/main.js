@@ -1,14 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
     const switchSlide = (container, interval) => {
         let slides = container.querySelectorAll('img');
-        if (slides.length === 0) return;
         let currentSlide = 0;
-        slides[currentSlide].style.opacity = 1;
-        setInterval(() => {
+        let slideInterval = setInterval(() => {
             slides[currentSlide].style.opacity = 0;
             currentSlide = (currentSlide + 1) % slides.length;
             slides[currentSlide].style.opacity = 1;
         }, interval);
+
+        container.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        container.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(() => {
+                slides[currentSlide].style.opacity = 0;
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].style.opacity = 1;
+            }, interval);
+        });
     };
     //initialize carousels
     const imageCarousel = document.querySelector('.image-carousel');
