@@ -398,18 +398,26 @@ section.about, section.portfolio, section.services, section.contact {
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .contact-form button {
   background-color: #333;
-  color: #fff;
+  color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .contact-form button:hover {
   background-color: #555;
+}
+
+#map iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
 }
 
  Slideshow Styles 
