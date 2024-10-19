@@ -17,16 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }, interval);
         });
     };
+    
     //initialize carousels
     const imageCarousel = document.querySelector('.image-carousel');
-    const teamSlideshow = document.querySelector('.team-slideshow');
 
     if (imageCarousel) {
         switchSlide(imageCarousel, 2000);
-    }
-
-    if (teamSlideshow) {
-        switchSlide(teamSlideshow, 3000);
     }
 
     //hamburger Menu Toggle

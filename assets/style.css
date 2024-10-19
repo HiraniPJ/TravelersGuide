@@ -136,15 +136,15 @@ header {
   left: 0;
 }
 
-/*Image Carousel and Team Slideshow*/
-.image-carousel, .team-slideshow {
+/*Image Carousel*/
+.image-carousel {
   position: relative;
   height: auto;
   width: 100%;
   overflow: hidden;
 }
 
-.image-carousel img, .team-slideshow img {
+.image-carousel img {
   transition: opacity 1s ease-in-out;
   position: absolute;
   top: 0;
@@ -154,7 +154,7 @@ header {
   height: auto;
 }
 
-.image-carousel img:first-child, .team-slideshow img:first-child {
+.image-carousel img:first-child {
   opacity: 1;
 }
 
@@ -407,19 +407,39 @@ section.about, section.portfolio, section.services, section.contact {
   background-color: #555;
 }
 
- /* Slideshow Styles */
-.team-slideshow {
-  max-width: 800px;
-  margin: 20px auto;
-}
-
-.team-slideshow div {
+/* Team Section Styling */
+.team-section {
   text-align: center;
+  padding: 60px 20px;
 }
 
-.team-slideshow img {
-  max-width: 100%;
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;  
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.team-member img {
+  width: 100%;
   height: auto;
+  border-radius: 50%;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: #333;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #777;
 }
 
 .about .row {
@@ -542,11 +562,11 @@ footer .footer-content a:hover {
     display: flex;
   }
   
-  .image-carousel, .team-slideshow {
+  .image-carousel {
       height: auto;
   }
 
-  .image-carousel img, .team-slideshow img {
+  .image-carousel img {
       position: relative;  
   }
 }
