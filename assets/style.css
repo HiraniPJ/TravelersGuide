@@ -1,13 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  --main-bg-color: #333;
+  --main-text-color: #fff;
+  --link-color: #0066cc;
+  --hover-color: #ff6600;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: #fff;
-  color: #333;
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -15,18 +21,18 @@ body {
 }
 
 a {
-  color: #0066cc;
+  color: var(--link-color);
   text-decoration: none;
 }
 
 a:hover {
-  color: #ff6600;
+  color: var(--hover-color);
   text-decoration: underline;
 }
 
 header {
-  background: #333;
-  color: #fff;
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
   width: 100%;
   padding: 5px 20px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -54,7 +60,6 @@ header {
   display: none;
   background: none;
   border: none;
-  color: none;
   font-size: 24px;
   cursor: pointer;
 }
@@ -67,13 +72,6 @@ header {
   display: block;
 }
 
-/*
-.navbar .nav-links {
-  display: flex;
-  align-items: center;
-}
-*/
-
 .navbar .nav-links ul {
   display: flex;
   list-style: none;
@@ -82,7 +80,7 @@ header {
 }
 
 .navbar .nav-links ul li a {
-  color: #fff;
+  color: var(--main-text-color);
   padding: 10px 15px;
   text-decoration: none;
   font-size: 16px;
@@ -91,41 +89,6 @@ header {
 .navbar .nav-links ul li a:hover {
   background-color: #868686;
 }
-/*
-.navbar .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;+
-  
-  margin-right: 20px;
-}*/
-
-
-/*
-header a, footer a {
-  text-decoration: none;
-  color: #fff;
-  height: 100%;
-  padding: 20px 0;
-  display: inline-block;
-}
-
-header a:hover, footer a:hover {
-  color: #ddd;
-}
-*/
-
-
-/*hover effect
-a, button {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-a:hover, button:hover {
-  background-color: #555;
-  color: #fff
-}
-*/
 
 /*spinner for loading states when navigating*/
 .loader {
@@ -189,7 +152,6 @@ a:hover, button:hover {
 /*Service page cards style*/
 .cards {
   display: grid;
-  flex-wrap: wrap;
   justify-content: space-around;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -197,7 +159,7 @@ a:hover, button:hover {
 }
 
 .card {
-  background: #fff;
+  background: var(--main-text-color);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   margin: 10px;
   width: calc(33.333% - 20px);
@@ -212,10 +174,11 @@ a:hover, button:hover {
 .card a {
   display: inline-block;
   margin-top: 10px;
-  background: #333;
-  color: #fff;
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
   padding: 10px 20px;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .card a:hover {
@@ -289,7 +252,7 @@ a:hover, button:hover {
   
 .homepage .content .text {
   margin-bottom: 50px;
-  color: #fff;
+  color: var(--main-text-color);
   font-size: 20px;
   text-align: center;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
@@ -330,6 +293,7 @@ section {
   align-items: center;
   flex-direction: column;
   padding: 80px 0 0;
+  margin-top: 60px;
 }
 
 section h2 {
@@ -414,13 +378,7 @@ section.about, section.portfolio, section.services, section.contact {
   background-color: #555;
 }
 
-#map iframe {
-  width: 100%;
-  height: 450px;
-  border: none;
-}
-
- Slideshow Styles 
+ /* Slideshow Styles */
 .team-slideshow {
   max-width: 800px;
   margin: 20px auto;
@@ -476,11 +434,6 @@ section.about, section.portfolio, section.services, section.contact {
   background: #525252; /* Darker background on hover */
 }
 
-section {
-  padding: 20px;
-  margin-top: 60px;
-}
-
 /*Main Footer*/
 footer {
   background: #000;
@@ -519,13 +472,12 @@ footer .footer-content a:hover {
       display: block;
   }
 
-  .navbar .nav-links {
+  .nav-links {
       position: absolute;
       right: 0;
       top: 60px;
       background: #333;
       width: 100%;
-      display: none;
       flex-direction: column;
       align-items: flex-start;
       padding-bottom: 10px;
@@ -542,18 +494,10 @@ footer .footer-content a:hover {
   .navbar .nav-links ul li a {
       display: block;
       width: 100%;
+      padding: 10px 15px;
   }
   
- /*.navbar .logo {
-    margin-right: 0;
-    flex-grow: 1;
-  }
-
-  .logo img {
-    width: 100px;
-  }*/
-
-    .image-carousel, .team-slideshow {
+  .image-carousel, .team-slideshow {
       height: auto;
   }
 
