@@ -269,7 +269,17 @@ a:hover, button:hover {
   text-align: center;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
 }
-  
+
+.homepage h1 {
+  font-size: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .homepage h1 {
+      font-size: 60px;
+  }
+}
+
 .content a {
   color: #000;
   display: block;
