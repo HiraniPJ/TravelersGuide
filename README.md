@@ -130,7 +130,7 @@ I know I am done when users can fill out and submit a contact form to inquire ab
 ## Manual Testing
 ### 1. Browser Compatibility:
   - The website was tested in multiple browsers including Google Chrome, Firefox, and Safari. It performed consistently across all platforms.
-  - 
+    
 ### 2. Responsiveness Testing:
   - The website was tested on various devices including mobile phones, tablets, and desktop computers. All pages adapted correctly, and the layout was responsive across screen sizes.
 
@@ -151,7 +151,7 @@ I know I am done when users can fill out and submit a contact form to inquire ab
 2. Click the Code button and copy the repository URL.
 3. Open your terminal and use the following command:
      - git clone https://github.com/your-username/repository-name.git
-     - 
+        
 ### Local Deployment:
 1. Open the cloned repository in a code editor.
 2. Ensure you have Git and a code editor (e.g., VSCode) installed.
