@@ -28,11 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (hamburger && navLinks) {
         hamburger.addEventListener('click', function() {
-            if (navLinks.style.display === 'block') {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'block';
-            }
+            navLinks.classList.toggle('active');
         });
     }
 });
