@@ -203,6 +203,12 @@ header {
 
 /*Portfolio page*/
 
+.portfolio .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:20px;
+}
+
 .video-container {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 ratio */
@@ -221,8 +227,9 @@ header {
 }
 
 .image-carousel {
-  max-width: 1000px;
+  max-width: 100%;
   margin: auto;
+  display: block;
 }
 
 .image-carousel img {
@@ -282,6 +289,10 @@ header {
   }
 
   .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio .cards {
     grid-template-columns: 1fr;
   }
 }
