@@ -188,9 +188,11 @@ a:hover, button:hover {
 
 /*Service page cards style*/
 .cards {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   justify-content: space-around;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   padding: 20px;
 }
 
@@ -218,6 +220,8 @@ a:hover, button:hover {
 
 .card a:hover {
   background: #555;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /*Portfolio page*/
@@ -400,6 +404,23 @@ section.about, section.portfolio, section.services, section.contact {
 .team-slideshow img {
   max-width: 100%;
   height: auto;
+}
+
+.about .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about .col {
+  width: calc(50% - 20px);
+}
+
+@media (max-width: 768px) {
+  .about .col {
+      width: 100%;
+      margin-bottom: 20px;
+  }
 }
 
 .contact form input, .contact form textarea {
