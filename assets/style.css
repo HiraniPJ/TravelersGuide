@@ -59,6 +59,14 @@ header {
   cursor: pointer;
 }
 
+.nav-links {
+  display: none;
+}
+
+.nav-links.active {
+  display: block;
+}
+
 /*
 .navbar .nav-links {
   display: flex;
