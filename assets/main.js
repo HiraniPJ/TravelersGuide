@@ -17,10 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }, interval);
         });
     };
-    
+
     //initialize carousels
     const imageCarousel = document.querySelector('.image-carousel');
-
     if (imageCarousel) {
         switchSlide(imageCarousel, 2000);
     }
@@ -32,4 +31,13 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.addEventListener('click', function() {
             navLinks.classList.toggle('active');
         });
+
+        
+    // Close Menu on Outside Click
+    document.addEventListener('click', function(event) {
+        if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+            navLinks.classList.remove('active');
+        }
+    });
+
 });

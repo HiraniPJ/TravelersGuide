@@ -72,6 +72,10 @@ header {
   display: none;
 }
 
+.nav-links {
+  display: none;
+}
+
 .nav-links.active {
   display: block;
 }
@@ -162,7 +166,7 @@ header {
 .cards {
   display: grid;
   justify-content: space-around;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
 }
@@ -289,8 +293,16 @@ header {
   }
 
   .cards {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
+  .card {
+    width: 100%; 
+    margin-bottom: 20px; 
+}
 
   .portfolio .cards {
     grid-template-columns: 1fr;
@@ -379,32 +391,206 @@ section.about, section.portfolio, section.services, section.contact {
   border: none;
 }
 
-/* Form Styling */
-.contact-form form {
-  background: #fff;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* Contact and Feedback Section Styling */
+.contact-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
 }
 
-.contact-form input, .contact-form textarea {
-  width: 100%;
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-items: center;
+  padding: 50px 0;
+}
+
+.contact-info {
+  grid-column: span 2;
+  text-align: left;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.contact-info ul li i {
+  margin-right: 10px;
+  color: #ff6600;
+}
+
+.contact-info ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-info ul li a:hover {
+  color: #ff6600;
+  text-decoration: underline;
+}
+
+/* Contact and Service Form Styling */
+.contact-form, .service-form, .feedback-form {
+  padding: 20px;
+  margin-bottom: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form, .feedback-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input:invalid, .service-form input:invalid {
+  border-color: #333;
+}
+
+.contact-form label, .feedback-form label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea,
+.contact-form textarea {
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
 }
 
-.contact-form button {
+.contact-form button,
+.feedback-form button {
+  padding: 10px 20px;
   background-color: #333;
   color: white;
   border: none;
-  padding: 10px 20px;
-  cursor: pointer;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.contact-form button:hover {
+.contact-form button:hover,
+.feedback-form button:hover {
   background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    grid-column: 1;
+  }
+}
+
+.service-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.service-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.service-form label {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.service-form div {
+  margin-bottom: 20px;
+}
+
+.service-form input[type="radio"] + label,
+.service-form input[type="checkbox"] + label {
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.service-form input,
+.service-form textarea,
+.service-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Style Radio Buttons and Checkboxes */
+.service-form input[type="radio"],
+.service-form input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.service-form button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.service-form button:hover {
+    background-color: #555;
+}
+
+/*positioning so that radios/checkboxes are aligned on the left */
+
+.service-form div input[type="radio"],
+.service-form div input[type="checkbox"] {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.service-form input[type="radio"],
+.service-form input[type="checkbox"] {
+    position: relative;
+    top: 0;
+}
+
+.service-form input[type="radio"]:focus,
+.service-form input[type="checkbox"]:focus {
+    outline: none;
 }
 
 /* Team Section Styling */
@@ -521,6 +707,7 @@ footer .footer-content a:hover {
       display: block;
       font-size: 24px;
       cursor: pointer;
+      
   }
 
   .nav-links {
@@ -542,7 +729,7 @@ footer .footer-content a:hover {
     background-color: #333;
     flex-direction: column;
     width: 100%;
-  }
+}
 
   .navbar #navLinks ul {
       flex-direction: column;

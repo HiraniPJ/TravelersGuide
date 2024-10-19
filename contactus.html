@@ -29,36 +29,123 @@
             </div>
         </nav>
     </header>
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <p>We are here to help! Reach out for any questions or to plan your visit.</p>
-
-        <div class="row">
-            <div class="col information">
-                <div class="contact-details">
-                    <p><i class="fas fa-map-marker-alt"></i> 555 Gion District, Kyoto, Japan</p>
-                    <p><i class="fas fa-envelope"></i> contact@explorekyoto.jp</p>
-                    <p><i class="fas fa-phone"></i> (+81) 123-456-789</p>
-                    <p><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</p>
-                    <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 2:00 PM</p>
-                    <p><i class="fas fa-clock"></i> Sunday: Closed</p>
-                    <p><i class="fas fa-globe"></i> www.explorekyoto.jp</p>
-                </div>          
-            </div>
-        <div class="col form">
-            <form>
-                <input type="text" placeholder="Name*" required>
-                <input type="email" placeholder="Email*" required>
-                <textarea placeholder="Message*" required></textarea>
-                <button type="submit">Send Message</button>
+    <section class="contact-section">
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>We are here to help! Reach out for any questions or to plan your visit.</p>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 555 Gion District, Kyoto, Japan</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:contact@explorekyoto.jp">contact@explorekyoto.jp</a></li>
+                    <li><i class="fas fa-phone"></i> (+81) 123-456-789</li>
+                    <li><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</li>
+                    <li><i class="fas fa-clock"></i> Saturday: 10:00 AM - 2:00 PM</li>
+                    <li><i class="fas fa-clock"></i> Sunday: Closed</li>
+                    <li><i class="fas fa-globe"></i> <a href="http://www.explorekyoto.jp">www.explorekyoto.jp</a></li>
+                </ul>
+            </div>    
+       
+        <!-- Book a Tour Form -->
+        <div id="book-tour-form" class="service-form">
+            <h3>Contact Us to Book a Tour</h3>
+            <form action="https://formdump.codeinstitute.net" method="POST">
+                <label for="tour-name">Full Name*</label>
+                <input type="text" id="tour-name" name="tour-name" required placeholder="Your Full Name">
+        
+                <label for="tour-email">Email*</label>
+                <input type="email" id="tour-email" name="tour-email" required placeholder="Your Email">
+        
+                <label for="tour-date">Preferred Tour Date*</label>
+                <input type="date" id="tour-date" name="tour-date" required>
+        
+                <!-- Tour Type Radio Buttons -->
+                <label>Tour Type*</label>
+                <div>
+                    <input type="radio" id="full-day" name="tour-type" value="Full Day" required>
+                    <label for="full-day">Full Day Tour</label><br>
+                    <input type="radio" id="half-day" name="tour-type" value="Half Day" required>
+                    <label for="half-day">Half Day Tour</label>
+                </div>
+        
+                <label for="tour-details">Tour Details</label>
+                <textarea id="tour-details" name="tour-details" rows="4" placeholder="Any additional information"></textarea>
+        
+                <button type="submit">Submit Tour Request</button>
             </form>
         </div>
+
+        <!-- Book an Experience Form -->
+        <div id="book-experience-form" class="service-form">
+            <h3>Book an Experience</h3>
+            <form action="https://formdump.codeinstitute.net" method="POST">
+                <label for="experience-name">Full Name*</label>
+                <input type="text" id="experience-name" name="experience-name" required placeholder="Your Full Name">
+
+                <label for="experience-email">Email*</label>
+                <input type="email" id="experience-email" name="experience-email" required placeholder="Your Email">
+
+                <label for="experience-date">Preferred Experience Date*</label>
+                <input type="date" id="experience-date" name="experience-date" required>
+
+                <label for="experience-type">Select Experience*</label>
+                <select id="experience-type" name="experience-type" required>
+                    <option value="Tea Ceremony">Tea Ceremony</option>
+                    <option value="Kimono Fitting">Kimono Fitting</option>
+                    <option value="Calligraphy Class">Calligraphy Class</option>
+                </select>
+
+                <!-- Additional Services Checkboxes -->
+                <label>Additional Services (Optional)</label>
+                <div>
+                    <input type="checkbox" id="photography-session" name="additional-services" value="Photography Session">
+                    <label for="photography-session">Photography Session</label><br>
+                    <input type="checkbox" id="lunch-guide" name="additional-services" value="Lunch with a Guide">
+                    <label for="lunch-guide">Lunch with a Guide</label><br>
+                    <input type="checkbox" id="souvenir" name="additional-services" value="Souvenir Package">
+                    <label for="souvenir">Souvenir Package</label>
+                </div>
+
+                <label for="experience-comments">Additional Comments</label>
+                <textarea id="experience-comments" name="experience-comments" rows="4" placeholder="Any additional information"></textarea>
+
+                <button type="submit">Submit Experience Request</button>
+            </form>
+        </div>
+
+            <!-- Customize Your Trip Form -->
+            <div id="customize-trip-form" class="service-form">
+                <h3>Customize Your Trip</h3>
+                <form action="https://formdump.codeinstitute.net" method="POST">
+                    <label for="trip-name">Full Name*</label>
+                    <input type="text" id="trip-name" name="trip-name" required placeholder="Your Full Name">
+
+                    <label for="trip-email">Email*</label>
+                    <input type="email" id="trip-email" name="trip-email" required placeholder="Your Email">
+
+                    <label for="trip-dates">Preferred Travel Dates*</label>
+                    <input type="date" id="trip-start" name="trip-start" required>
+                    <input type="date" id="trip-end" name="trip-end" required>
+
+                    <!-- Group Size Radio Buttons -->
+                    <label>Group Size*</label>
+                    <div>
+                        <input type="radio" id="solo" name="group-size" value="Solo" required>
+                        <label for="solo">Solo Traveler</label><br>
+                        <input type="radio" id="couple" name="group-size" value="Couple" required>
+                        <label for="couple">Couple</label><br>
+                        <input type="radio" id="group" name="group-size" value="Group" required>
+                        <label for="group">Group</label>
+                    </div>
+
+                    <label for="trip-details">Trip Details*</label>
+                    <textarea id="trip-details" name="trip-details" rows="4" required placeholder="Describe your ideal trip"></textarea>
+
+                    <button type="submit">Submit Trip Request</button>
+                </form>
+            </div>
         </div>
     </section>
-
-    <div id="map">
-        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD1VnYC6EugmolDY9RjsZ77TeXstyj0288&q=Kennin-ji+Temple&center=35.0000373,135.7628451&zoom=15"></iframe>
-    </div>
     <footer>
         <div>
             <span>Copyright &copy; 2024 All Rights Reserved</span>
@@ -74,8 +161,8 @@
     </footer>
 
 
-<!-- Link to JavaScript file -->
-<script src="./assets/main.js" defer></script>
+    <!-- Link to JavaScript file -->
+    <script src="./assets/main.js" defer></script>
 
 </body>
 </html>
