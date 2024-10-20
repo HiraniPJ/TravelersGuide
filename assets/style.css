@@ -514,20 +514,15 @@ section > p {
   }
 }
 
+
 /* Interactive Map */
 .map-container {
-  position: relative;
-  padding-bottom: 56.25%; /* This keeps the 16:9 ratio */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  margin: 20px 0;
+  flex: 1;
+  min-width: 300px;
+  height: 400px;
 }
 
 .map-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   border: none;
@@ -545,14 +540,15 @@ section > p {
   gap: 30px;
 }
 
+/* Contact Info and Map Layout */
 .contact-info-map {
   display: flex;
   justify-content: space-between;
   gap: 30px;
+  align-items: start;
   flex-wrap: wrap;
 }
 
-/* Contact Info Styling */
 .contact-info {
   flex: 1;
   min-width: 300px;
@@ -596,28 +592,110 @@ section > p {
   text-decoration: underline;
 }
 
-/* Contact and Service Form Styling */
-.contact-form, .service-form, .feedback-form {
+/* Forms Container and Forms Styling */
+.forms-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-form {
   padding: 20px;
-  margin-bottom: 40px;
   background-color: #fff;
-  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.service-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.service-form label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 1rem;
+  }
+
+.service-form div {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.service-form input,
+.service-form textarea,
+.service-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Radio Buttons and Checkboxes Styling */
+.service-form input[type="radio"],
+.service-form input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-self: flex-start;
+}
+
+.service-form input[type="radio"] + label,
+.service-form input[type="checkbox"] + label {
+  display: inline-block;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.service-form .radio-checkbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service-form button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.service-form button:hover {
+  background-color: #555;
+}
+
+/* Positioning of radio/checkboxes for alignment */
+.service-form div input[type="radio"],
+.service-form div input[type="checkbox"] {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.service-form input[type="radio"]:focus,
+.service-form input[type="checkbox"]:focus {
+  outline: none;
+}
+
+/* Forms: Invalid Field Styling */
+.contact-form input:invalid,
+.service-form input:invalid {
+  border-color: #333;
 }
 
 .contact-form form, .feedback-form form {
   display: flex;
   flex-direction: column;
-}
-
-.contact-form input:invalid, .service-form input:invalid {
-  border-color: #333;
-}
-
-.contact-form label, .feedback-form label {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 5px;
 }
 
 .contact-form input,
@@ -649,111 +727,34 @@ section > p {
   background-color: #555;
 }
 
-/* Responsive Design */
+/* Responsive Design for Contact Info and Forms */
 @media (max-width: 768px) {
-  .contact-container {
+  .contact-info-map {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forms-container {
     flex-direction: column;
   }
 
   .contact-info {
     grid-column: 1;
   }
-}
 
-.service-form {
-  flex: 1;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-.service-form h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.service-form label {
-  display: inline-block;
-  margin-bottom: 10px;
-  color: #333;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.service-form div {
-  margin-bottom: 20px;
-}
-
-.service-form input[type="radio"] + label,
-.service-form input[type="checkbox"] + label {
-    margin-left: 5px;
-    display: inline-block;
-    vertical-align: middle;
-    font-weight: normal;
-    line-height: 1.5;
-}
-
-.service-form input,
-.service-form textarea,
-.service-form select {
+  .map-container {
+    height: 450px;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
+ }
 }
 
-/* Style Radio Buttons and Checkboxes */
-.service-form input[type="radio"],
-.service-form input[type="checkbox"] {
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-.service-form button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.service-form button:hover {
-    background-color: #555;
-}
-
-/*positioning so that radios/checkboxes are aligned on the left */
-
-.service-form div input[type="radio"],
-.service-form div input[type="checkbox"] {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.service-form input[type="radio"],
-.service-form input[type="checkbox"] {
-    position: relative;
-    top: 0;
-}
-
-.service-form input[type="radio"]:focus,
-.service-form input[type="checkbox"]:focus {
-    outline: none;
-}
-
-
-
-
+/* General Contact Section Styling */
 .contact form input, .contact form textarea {
   padding: 10px;
   width: 100%;
   font-size: 16px;
   outline: none;
-  border: 1px solid #bfbfbf; /* Styling for form inputs */
+  border: 1px solid #bfbfbf;
 }
 
 .contact form button {
@@ -765,31 +766,12 @@ section > p {
   cursor: pointer;
   border-radius: 5px;
   background: #333;
-  transition: 0.2s ease; /* Button styling with transition */
+  transition: 0.2s ease;
 }
 
 .contact form button:hover {
-  background: #525252; /* Darker background on hover */
+  background: #525252;
 }
-
-/* Map container styling */
-.map-container {
-  position: relative;
-  padding-bottom: 56.25%; /* This is a 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  margin: 20px 0; 
-}
-
-/*.map-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}*/
 
 /*Main Footer*/
 footer {

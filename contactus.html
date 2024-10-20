@@ -8,8 +8,10 @@
     <!--jQuery and Slick Carousel scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!--Slick Carousel Styles-->
-    <link rel ="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <!--Link to the CSS file-->
     <link rel ="stylesheet" type ="text/css" href="./assets/style.css">    
 </head>
@@ -31,122 +33,112 @@
     </header>
     <section class="contact-section">
         <div class="contact-container">
-            <!-- Contact Information -->
-            <div class="contact-info">
-                <h2>Contact Us</h2>
-                <p>We are here to help! Reach out for any questions or to plan your visit.</p>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> 555 Gion District, Kyoto, Japan</li>
-                    <li><i class="fas fa-envelope"></i> <a href="mailto:contact@explorekyoto.jp">contact@explorekyoto.jp</a></li>
-                    <li><i class="fas fa-phone"></i> (+81) 123-456-789</li>
-                    <li><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</li>
-                    <li><i class="fas fa-clock"></i> Saturday: 10:00 AM - 2:00 PM</li>
-                    <li><i class="fas fa-clock"></i> Sunday: Closed</li>
-                    <li><i class="fas fa-globe"></i> <a href="http://www.explorekyoto.jp">www.explorekyoto.jp</a></li>
-                </ul>
-            </div>    
-     
-        <!-- Book a Tour Form -->
-        <div id="book-tour-form" class="service-form">
-            <h3>Contact Us to Book a Tour</h3>
-            <form action="https://formdump.codeinstitute.net" method="POST">
-                <label for="tour-name">Full Name*</label>
-                <input type="text" id="tour-name" name="tour-name" required placeholder="Your Full Name">
-        
-                <label for="tour-email">Email*</label>
-                <input type="email" id="tour-email" name="tour-email" required placeholder="Your Email">
-        
-                <label for="tour-date">Preferred Tour Date*</label>
+            <div class="contact-info-map">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <p>We are here to help! Reach out for any questions or to plan your visit.</p>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 555 Gion District, Kyoto, Japan</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:contact@explorekyoto.jp">contact@explorekyoto.jp</a></li>
+                        <li><i class="fas fa-phone"></i> (+81) 123-456-789</li>
+                        <li><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</li>
+                        <li><i class="fas fa-clock"></i> Saturday: 10:00 AM - 2:00 PM</li>
+                        <li><i class="fas fa-clock"></i> Sunday: Closed</li>
+                        <li><i class="fas fa-globe"></i> <a href="http://www.explorekyoto.jp">www.explorekyoto.jp</a></li>
+                    </ul>
+                </div>
+                <!-- Google Map -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32420.312667912898!2d135.7328858405309!3d34.99350274626198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600108eb2db70209%3A0x1061b5eff19324dc!2sPontocho%20Park!5e0!3m2!1sen!2suk!4v1729380161569!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+    
+            <!-- Forms Section -->
+            <div class="forms-container">
+                <!-- Book a Tour Form -->
+                <div id="book-tour-form" class="service-form">
+                    <h3>Contact Us to Book a Tour</h3>
+                    <form>
+                        <label for="tour-name">Full Name*</label>
+                        <input type="text" id="tour-name" required placeholder="Your Full Name">
+                        <label for="tour-email">Email*</label>
+                        <input type="email" id="tour-email" required placeholder="Your Email">
+                        <label for="tour-date">Preferred Tour Date*</label>
                 <input type="date" id="tour-date" name="tour-date" required>
         
                 <!-- Tour Type Radio Buttons -->
-                <label>Tour Type*</label>
-                <div>
-                    <input type="radio" id="full-day" name="tour-type" value="Full Day" required>
-                    <label for="full-day">Full Day Tour</label><br>
-                    <input type="radio" id="half-day" name="tour-type" value="Half Day" required>
-                    <label for="half-day">Half Day Tour</label>
-                </div>
+                        <label>Tour Type*</label>
+                        <div>
+                            <input type="radio" id="full-day" name="tour-type" value="Full Day" required>
+                            <label for="full-day">Full Day Tour</label><br>
+                            <input type="radio" id="half-day" name="tour-type" value="Half Day" required>
+                            <label for="half-day">Half Day Tour</label>
+                        </div>
         
-                <label for="tour-details">Tour Details</label>
+                        <label for="tour-details">Tour Details</label>
                 <textarea id="tour-details" name="tour-details" rows="4" placeholder="Any additional information"></textarea>
         
-                <button type="submit">Submit Tour Request</button>
-            </form>
-        </div>
-
-        <!-- Book an Experience Form -->
-        <div id="book-experience-form" class="service-form">
-            <h3>Book an Experience</h3>
-            <form action="https://formdump.codeinstitute.net" method="POST">
-                <label for="experience-name">Full Name*</label>
-                <input type="text" id="experience-name" name="experience-name" required placeholder="Your Full Name">
-
-                <label for="experience-email">Email*</label>
-                <input type="email" id="experience-email" name="experience-email" required placeholder="Your Email">
-
-                <label for="experience-date">Preferred Experience Date*</label>
-                <input type="date" id="experience-date" name="experience-date" required>
-
-                <label for="experience-type">Select Experience*</label>
-                <select id="experience-type" name="experience-type" required>
-                    <option value="Tea Ceremony">Tea Ceremony</option>
-                    <option value="Kimono Fitting">Kimono Fitting</option>
-                    <option value="Calligraphy Class">Calligraphy Class</option>
-                </select>
-
-                <!-- Additional Services Checkboxes -->
-                <label>Additional Services (Optional)</label>
-                <div>
-                    <input type="checkbox" id="photography-session" name="additional-services" value="Photography Session">
-                    <label for="photography-session">Photography Session</label><br>
-                    <input type="checkbox" id="lunch-guide" name="additional-services" value="Lunch with a Guide">
-                    <label for="lunch-guide">Lunch with a Guide</label><br>
-                    <input type="checkbox" id="souvenir" name="additional-services" value="Souvenir Package">
-                    <label for="souvenir">Souvenir Package</label>
+                        <button type="submit">Submit Tour Request</button>
+                    </form>
                 </div>
-
-                <label for="experience-comments">Additional Comments</label>
-                <textarea id="experience-comments" name="experience-comments" rows="4" placeholder="Any additional information"></textarea>
-
-                <button type="submit">Submit Experience Request</button>
-            </form>
-        </div>
-
-            <!-- Customize Your Trip Form -->
-            <div id="customize-trip-form" class="service-form">
-                <h3>Customize Your Trip</h3>
-                <form action="https://formdump.codeinstitute.net" method="POST">
-                    <label for="trip-name">Full Name*</label>
-                    <input type="text" id="trip-name" name="trip-name" required placeholder="Your Full Name">
-
-                    <label for="trip-email">Email*</label>
-                    <input type="email" id="trip-email" name="trip-email" required placeholder="Your Email">
-
-                    <label for="trip-dates">Preferred Travel Dates*</label>
-                    <input type="date" id="trip-start" name="trip-start" required>
-                    <input type="date" id="trip-end" name="trip-end" required>
-
-                    <!-- Group Size Radio Buttons -->
-                    <label>Group Size*</label>
-                    <div>
-                        <input type="radio" id="solo" name="group-size" value="Solo" required>
-                        <label for="solo">Solo Traveler</label><br>
-                        <input type="radio" id="couple" name="group-size" value="Couple" required>
-                        <label for="couple">Couple</label><br>
-                        <input type="radio" id="group" name="group-size" value="Group" required>
-                        <label for="group">Group</label>
-                    </div>
-
-                    <label for="trip-details">Trip Details*</label>
-                    <textarea id="trip-details" name="trip-details" rows="4" required placeholder="Describe your ideal trip"></textarea>
-
-                    <button type="submit">Submit Trip Request</button>
-                </form>
-            </div>
-        </div>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32420.312667912898!2d135.7328858405309!3d34.99350274626198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600108eb2db70209%3A0x1061b5eff19324dc!2sPontocho%20Park!5e0!3m2!1sen!2suk!4v1729380161569!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+                <!-- Book an Experience Form -->
+                <div id="book-experience-form" class="service-form">
+                    <h3>Book an Experience</h3>
+                    <form>
+                        <label for="experience-name">Full Name*</label>
+                        <input type="text" id="experience-name" required placeholder="Your Full Name">
+                        <label for="experience-email">Email*</label>
+                        <input type="email" id="experience-email" required placeholder="Your Email">
+                        <label for="experience-date">Preferred Experience Date*</label>
+                        <input type="date" id="experience-date" required>
+                        <label for="experience-type">Select Experience*</label>
+                        <select id="experience-type" required>
+                            <option value="Tea Ceremony">Tea Ceremony</option>
+                            <option value="Kimono Fitting">Kimono Fitting</option>
+                            <option value="Calligraphy Class">Calligraphy Class</option>
+                        </select>
+                        <label>Additional Services (Optional)</label>
+                        <div>
+                            <input type="checkbox" id="photography-session" value="Photography Session">
+                            <label for="photography-session">Photography Session</label><br>
+                            <input type="checkbox" id="lunch-guide" value="Lunch with a Guide">
+                            <label for="lunch-guide">Lunch with a Guide</label><br>
+                            <input type="checkbox" id="souvenir" value="Souvenir Package">
+                            <label for="souvenir">Souvenir Package</label>
+                        </div>
+                        <textarea id="experience-comments" rows="4" placeholder="Any additional information"></textarea>
+                        <button type="submit">Submit Experience Request</button>
+                    </form>
+                </div>
+        
+                <!-- Customize Your Trip Form -->
+                <div id="customize-trip-form" class="service-form">
+                    <h3>Customize Your Trip</h3>
+                    <form>
+                        <label for="trip-name">Full Name*</label>
+                        <input type="text" id="trip-name" required placeholder="Your Full Name">
+                        <label for="trip-email">Email*</label>
+                        <input type="email" id="trip-email" required placeholder="Your Email">
+                        <label for="trip-dates">Preferred Travel Dates*</label>
+                        <input type="date" id="trip-start" required>
+                        <input type="date" id="trip-end" required>
+                        <label>Group Size*</label>
+                        <div>
+                            <input type="radio" id="solo" name="group-size" value="Solo" required>
+                            <label for="solo">Solo Traveler</label><br>
+                            <input type="radio" id="couple" name="group-size" value="Couple" required>
+                            <label for="couple">Couple</label><br>
+                            <input type="radio" id="group" name="group-size" value="Group" required>
+                            <label for="group">Group</label>
+                        </div>
+                        <label for="trip-details">Trip Details*</label>
+                        <textarea id="trip-details" rows="4" required placeholder="Describe your ideal trip"></textarea>
+                        <button type="submit">Submit Trip Request</button>
+                    </form>
+                </div>
+            </div>    
         </div>
     </section>
     <footer>
