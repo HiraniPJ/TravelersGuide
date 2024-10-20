@@ -136,7 +136,7 @@ I know I am done when users can fill out and submit a contact form to inquire ab
 
 ### 3. Link Testing:
   - All internal and external links were tested to ensure they led to the correct destinations.
-  - 
+ 
 ### 4. Form Submission:
   - All forms were tested to ensure they captured user data correctly and displayed the appropriate confirmation messages.
 
