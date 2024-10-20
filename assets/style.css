@@ -140,48 +140,6 @@ header {
   left: 0;
 }
 
-/*Service page cards style*/
-.cards {
-  display: grid;
-  justify-content: space-around;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.card {
-  background: #fff;
-  color: #333;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  margin: 10px;
-  width: calc(33.333% - 20px);
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-}
-
-.card a {
-  display: inline-block;
-  margin-top: 10px;
-  background: var(--main-bg-color);
-  color: var(--main-text-color);
-  padding: 10px 20px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.card a, .card p {
-  color: #333;
-}
-
-.card a:hover {
-  background: #555;
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
 /* Services Section Styling */
 .services {
   text-align: center;
@@ -196,7 +154,7 @@ header {
   text-align: center;
 }
 
-/* Service Cards - Flexbox layout */
+/* Service - Flexbox layout */
 .service-list {
   display: flex;
   justify-content: space-between;
@@ -205,7 +163,7 @@ header {
   margin-top: 30px;
 }
 
-/* Individual Service Card Styling */
+/* Individual Service Styling */
 .service-item {
   background-color: #fff;
   border-radius: 8px;
@@ -290,16 +248,6 @@ header {
   width: 100%;
   height: auto;
   border-radius: 8px;
-}
-
-.caption {
-  color: #fff;
-  font-size: 1.5rem;
-  position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Navigation arrows */
@@ -446,22 +394,6 @@ header {
   .homepage h1 {
       font-size: 60px;
   }
-
-  .cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .card {
-    width: 100%; 
-    margin-bottom: 20px; 
-}
-
-  .portfolio .cards {
-    grid-template-columns: 1fr;
-  }
 }
 
 .content a {
@@ -500,15 +432,6 @@ section > p {
   text-align: center; /* Center-align text for better readability */
 }
 
-section .cards {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin-top: 50px;
-  padding: 0 10px;
-  justify-content: space-between;
-}
-
 section.about, section.portfolio, section.services, section.contact {
   margin: 0 auto;
   max-width: 1200px; /* Centralize sections for a structured look */
@@ -522,7 +445,7 @@ section.about, section.portfolio, section.services, section.contact {
   margin: 30px 0 10px; /* Spacing around headers for visual separation */
 }
 
-.about, .portfolio .cards, .services .cards {
+.about {
   padding-left: 20px; /* Padding for lists within about section */
 }
   
@@ -926,10 +849,4 @@ footer .footer-content a:hover {
   }
 }
 
-@media screen and (max-width: 560px) {
-  /* Adjustments for very small screens */
-  section .cards .card {
-    margin-bottom: 30px; /* Increased margin for clarity */
-  }
-}
 

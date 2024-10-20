@@ -12,38 +12,34 @@ document.addEventListener('DOMContentLoaded', function() {
     // Slideshow functionality
     let slideIndex = 1;
     showSlides(slideIndex);
-
+    
     // Next/previous controls
     function plusSlides(n) {
-        showSlides += n;
-        if (slideIndex > slides.length) {
-            slideIndex = 1;
-        }
-        if (slideIndex < 1) {
-            slideIndex = slides.length;
-        }
-        showSlides(slideIndex);
+        showSlides(slideIndex += n);
     }
-
+    
     // Thumbnail image controls
     function currentSlide(n) {
-        showSlides = n;
-        showSlides(slideIndex);
+        showSlides(slideIndex = n);
     }
-
+    
     function showSlides(n) {
         let i;
         let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
         let thumbnails = document.getElementsByClassName("demo");
-
+    
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";  
         }
-
+    
         for (i = 0; i < thumbnails.length; i++) {
             thumbnails[i].className = thumbnails[i].className.replace(" active", "");
         }
-
+    
         slides[slideIndex-1].style.display = "block";  
         thumbnails[slideIndex-1].className += " active";
     }
