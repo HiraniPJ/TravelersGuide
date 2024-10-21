@@ -18,6 +18,14 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* General Reset for Margin/Padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 h1, p, a {
@@ -50,12 +58,15 @@ header {
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+  align-items: center; 
+  padding: 10px 0px;
   background-color: #333;
   width: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .logo img {
@@ -76,17 +87,15 @@ header {
   display: none;
 }
 
+.hamburger {
+  display: none; /* Only display on mobile */
+}
+
 .nav-links {
   display: flex;
   gap: 20px;
   flex-direction: column;
-   /* align-items: center;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background-color: #111010;
-  width: 100%;
-  z-index: 1000; */
+  z-index: 1000; 
 }
 
 .nav-links.active {
@@ -103,11 +112,12 @@ header {
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 15px;
+  gap: 10px;
 }
 
 .nav-links ul li {
-  padding-right: 20px;
+  margin: 0;
+  padding: 0 15px;
 }
 
 .nav-links ul li:last-child {
@@ -126,6 +136,95 @@ header {
 .navbar .nav-links ul li a:hover {
   background-color: #868686;
   border-radius: 4px;
+}
+
+/* Home Page*/
+.homepage {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("./images/home-bg\ \(2\).jpg"); /* Placeholder for a background image related to Kyoto */
+  background-position: center 65%;
+  background-size: cover;
+  z-index: 1;
+  margin-top: 75px;
+}
+  
+.homepage::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Dark overlay to enhance text visibility */
+}
+  
+.homepage .content {
+  display: flex;
+  height: 85%;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+  
+.homepage .content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  z-index: 5;
+}
+  
+.homepage .content .text {
+  margin-bottom: 50px;
+  color: var(--main-text-color);
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
+}
+
+@media screen and (min-width: 768px) {
+  .homepage h1 {
+      font-size: 40px;
+  }
+
+}
+
+.content a {
+  color: #000;
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0 10px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: #fff;
+  border: 2px solid #fff;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Smooth transition for hover effects */
+  text-decoration: none;
+}
+  
+.content a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.3); /* Transition to a translucent background on hover */
+}
+  
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 0 0;
+  margin-top: 60px;
+}
+
+section h2 {
+  font-size: 2rem; /* Consistent font size for section headers */
+}
+
+section > p {
+  text-align: center; /* Center-align text for better readability */
 }
 
 /*spinner for loading states when navigating*/
@@ -369,94 +468,6 @@ header {
   border: none;
 }
 
-.homepage {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  background: url("./images/home-bg\ \(2\).jpg"); /* Placeholder for a background image related to Kyoto */
-  background-position: center 65%;
-  background-size: cover;
-}
-  
-.homepage::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.2); /* Dark overlay to enhance text visibility */
-}
-  
-.homepage .content {
-  display: flex;
-  height: 85%;
-  z-index: 3;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-  
-.homepage .content h1 {
-  font-size: 60px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-  
-.homepage .content .text {
-  margin-bottom: 50px;
-  color: var(--main-text-color);
-  font-size: 20px;
-  text-align: center;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
-}
-
-.homepage h1 {
-  font-size: 40px;
-}
-
-@media screen and (min-width: 768px) {
-  .homepage h1 {
-      font-size: 60px;
-  }
-
-}
-
-.content a {
-  color: #000;
-  display: block;
-  text-transform: uppercase;
-  font-size: 18px;
-  margin: 0 10px;
-  padding: 10px 30px;
-  border-radius: 5px;
-  background: #fff;
-  border: 2px solid #fff;
-  transition: 0.4s ease;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Smooth transition for hover effects */
-  text-decoration: none;
-}
-  
-.content a:hover {
-  color: #fff;
-  background: rgba(255,255,255,0.3); /* Transition to a translucent background on hover */
-}
-  
-section {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 80px 0 0;
-  margin-top: 60px;
-}
-
-section h2 {
-  font-size: 2rem; /* Consistent font size for section headers */
-}
-
-section > p {
-  text-align: center; /* Center-align text for better readability */
-}
 
 /* About Us Section */
 .aboutus {
@@ -889,4 +900,55 @@ footer .footer-content a:hover {
   }
 }
 
+/* 404 Page Styling */
+.not-found-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; /* Soft background color */
+}
+
+.not-found-container {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.not-found-container h1 {
+  font-size: 10rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.not-found-container h2 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: #555;
+}
+
+.not-found-container p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.not-found-container a.btn {
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 12px 25px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.not-found-container a.btn:hover {
+  background-color: #555;
+}
 
