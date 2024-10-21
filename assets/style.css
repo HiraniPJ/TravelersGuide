@@ -952,3 +952,48 @@ footer .footer-content a:hover {
   background-color: #555;
 }
 
+@media (max-width: 768px) {
+  .not-found-container {
+      padding: 30px;
+  }
+
+  .not-found-container h1 {
+      font-size: 6rem;
+  }
+
+  .not-found-container h2 {
+      font-size: 1.8rem;
+  }
+
+  .not-found-container p {
+      font-size: 1rem;
+  }
+
+  .not-found-container a.btn {
+      font-size: 14px;
+      padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .not-found-container {
+      padding: 20px;
+  }
+
+  .not-found-container h1 {
+      font-size: 4rem;
+  }
+
+  .not-found-container h2 {
+      font-size: 1.5rem;
+  }
+
+  .not-found-container p {
+      font-size: 0.95rem;
+  }
+
+  .not-found-container a.btn {
+      font-size: 13px;
+      padding: 8px 18px;
+  }
+}
