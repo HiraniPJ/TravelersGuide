@@ -458,11 +458,13 @@ section > p {
   }
 
   .row {
-    gap: 5px;
+    /*gap: 5px;*/
+    display: none;
   }
 
   .column {
-    max-width: 60px;
+    /*max-width: 60px;*/
+    display: none;
   }
 
   .prev, .next {
@@ -508,7 +510,10 @@ section > p {
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
-  max-width: 100%;
+  max-width: 90%;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .video-container iframe {
@@ -518,6 +523,7 @@ section > p {
   width: 100%;
   height: 100%;
   border: none;
+  border-radius: 8px;
 }
 
 
