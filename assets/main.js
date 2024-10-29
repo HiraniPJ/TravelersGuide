@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 navLinks.style.display = 'block';
             }
         });
+    }
 
 
     // Slideshow functionality
@@ -31,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function showSlides(n) {
         let i;
         let slides = document.getElementsByClassName("slide");
-        let dots = document.getElementsByClassName("dot");
         let thumbnails = document.getElementsByClassName("demo");
     
         if (n > slides.length) { slideIndex = 1 }
@@ -72,5 +72,4 @@ document.addEventListener('DOMContentLoaded', function() {
             currentSlide(index + 1);
         });
     });
-    }
 });

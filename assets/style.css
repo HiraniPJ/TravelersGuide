@@ -355,17 +355,40 @@ section > p {
   }
 }
 
+/* Portfolio Page Styling */
+.portfolio {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2.5rem;
+  color: var(--main-text-color);
+  margin-bottom: 20px;
+}
+
+.portfolio p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 100%;
   position: relative;
   margin: auto;
   overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.slide {
-  display: none;
-  text-align: center;
+.slide h3 {
+  color: var(--main-text-color);
+  font-size: 1.5rem;
+  margin-top: 10px;
 }
 
 .slide img {
@@ -374,17 +397,50 @@ section > p {
   border-radius: 8px;
 }
 
+/* Thumbnails */
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.column {
+  flex: 1;
+  max-width: 80px;
+  margin: 5px;
+}
+
+.column img {
+  width: 100%;
+  cursor: pointer;
+  height: auto;
+  border-radius: 5px;
+  transition: 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.column img:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
 /* Navigation arrows */
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  padding: 10px;
+  padding: 8%;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   cursor: pointer;
   font-size: 18px;
   border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .prev {
@@ -395,31 +451,31 @@ section > p {
   right: 10px;
 }
 
-/* Thumbnails */
-.row {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .portfolio h2 {
+    font-size: 2rem;
+  }
+
+  .portfolio p {
+    font-size: 1rem;
+  }
+
+  .row {
+    gap: 5px;
+  }
+
+  .column {
+    max-width: 60px;
+  }
+
+  .prev, .next {
+    font-size: 16px;
+    padding: 6px;
+  }
 }
 
-.column {
-  flex: 1;
-  max-width: 100px;
-  margin: 5px;
-}
-
-.column img {
-  width: 100%;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.column img:hover {
-  opacity: 0.7;
-}
-
-/* Dot navigation */
+/* Dot navigation 
 .dot-container {
   text-align: center;
   margin-top: 15px;
@@ -437,7 +493,7 @@ section > p {
 
 .active, .dot:hover {
   background-color: #717171;
-}
+} */
 
 /* Animation for fading effect */
 .fade {
