@@ -123,6 +123,7 @@ I know I am done when users can fill out and submit a contact form to inquire ab
 ### Validator Testing
 - ### HTML Validation:
      All HTML files were tested using the W3C validator, and no errors were found.
+![image](https://github.com/user-attachments/assets/8e9b4268-d970-4599-98a5-6b93db9dd83f)
 
 - ### CSS Validation:
      The CSS was tested using the W3C Jigsaw validator, and no issues were reported.
