@@ -128,6 +128,10 @@ I know I am done when users can fill out and submit a contact form to inquire ab
 - ### CSS Validation:
      The CSS was tested using the W3C Jigsaw validator, and no issues were reported.
 
+  **Error**
+  ![image](https://github.com/user-attachments/assets/1a440957-bfa9-4418-b01e-9b75870410d0)
+
+
 ## Manual Testing
 ### 1. Browser Compatibility:
   - The website was tested in multiple browsers including Google Chrome, Firefox, and Safari. It performed consistently across all platforms.
