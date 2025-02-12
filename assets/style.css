@@ -79,7 +79,7 @@ header {
   display: none;
   background: none;
   border: none;
-  color: none;
+  color: #ffffff;
   font-size: 24px;
   cursor: pointer;
   margin-right: 20px;
@@ -241,7 +241,6 @@ section > p {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
   100% { transform: rotate (360deg); }
 }
 
