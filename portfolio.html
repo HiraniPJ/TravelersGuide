@@ -10,9 +10,10 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!--Slick Carousel Styles-->
     <link rel ="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <!-- Font Awesome Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM4Z3eMlD5o6wfuEd5W9sk5nGSk5zhjM6eyB+gT" crossorigin="anonymous">
 
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
         <!--Link to the CSS file-->
     <link rel ="stylesheet" type ="text/css" href="./assets/style.css">    
 </head>
@@ -32,99 +33,95 @@
             </div>
         </nav>
     </header>
-<section class="portfolio" id="portfolio">
-    <h2>Our Portfolio</h2>
-    <p>Immerse yourself in the captivating allure of Kyoto through our thoughtfully curated portfolio, designed to take you on a journey through the heart of Japan’s ancient capital. Each image captures the essence of Kyoto’s rich cultural heritage, offering a glimpse into its timeless beauty.</p>
+    <section class="portfolio" id="portfolio">
+        <h2>Our Portfolio</h2>
+        <p>Immerse yourself in the captivating allure of Kyoto through our thoughtfully curated portfolio, designed to take you on a journey through the heart of Japan’s ancient capital. Each image captures the essence of Kyoto’s rich cultural heritage, offering a glimpse into its timeless beauty.</p>
 
-    <div class="slideshow-container">
-        <div class="slide fade">
-            <img src="./assets/images/Kinkaku-ji.jpg" alt="Kinkaku-Ji">
-            <h3>Kinkaku-Ji Temple</h3>
-           
-        </div>
-        <div class="slide fade">
-            <img src="./assets/images/Garden2.jpg" alt="Kyoto Garden">
-            <h3>Nanzen-ji Garden</h3>
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="./assets/images/Kinkaku-ji.jpg" alt="Kinkaku-Ji">
+                <h3>Kinkaku-Ji Temple</h3>
             
-        </div>
-        <div class="slide fade">
-            <img src="./assets/images/Gion Festival.jpg" alt="Gion Festival">
-            <h3>Gion Festival</h3>
-            
-        </div>
-        <div class="slide fade">
-            <img src="./assets/images/Kyoto Temple.jpg" alt="Historic Kyoto Temple">
-            <h3>Historic Kyoto Temple</h3>
+            </div>
+            <div class="slide fade">
+                <img src="./assets/images/Garden2.jpg" alt="Kyoto Garden">
+                <h3>Nanzen-ji Garden</h3>
+                
+            </div>
+            <div class="slide fade">
+                <img src="./assets/images/Gion Festival.jpg" alt="Gion Festival">
+                <h3>Gion Festival</h3>
+                
+            </div>
+            <div class="slide fade">
+                <img src="./assets/images/Kyoto Temple.jpg" alt="Historic Kyoto Temple">
+                <h3>Historic Kyoto Temple</h3>
+            </div>
+
+            <div class="slide fade">
+                <img src="./assets/images/Kyoto Garden.jpg" alt="Beautiful Kyoto Garden">
+                <h3>Beautiful Kyoto Garden</h3>
+            </div>
+
+            <div class="slide fade">
+                <img src="./assets/images/Kyoto Street.jpg" alt="Architectural Streets of Kyoto">
+                <h3>Architectural Streets of Kyoto</h3>
+            </div>
+
+                        <!-- Navigation arrows -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
 
-        <div class="slide fade">
-            <img src="./assets/images/Kyoto Garden.jpg" alt="Beautiful Kyoto Garden">
-            <h3>Beautiful Kyoto Garden</h3>
+        <!-- Thumbnail images for navigation -->
+        <div class="row">
+            <div class="column">
+                <img class="demo" src="./assets/images/Kinkaku-ji.jpg" onclick="currentSlide(1)" alt="Kinkaku-Ji Temple">
+            </div>
+            <div class="column">
+                <img class="demo" src="./assets/images/Garden2.jpg" onclick="currentSlide(2)" alt="Kyoto Garden">
+            </div>
+            <div class="column">
+                <img class="demo" src="./assets/images/Gion Festival.jpg" onclick="currentSlide(3)" alt="Gion Festival">
+            </div>
+            <div class="column">
+                <img class="demo" src="./assets/images/Kyoto Temple.jpg" onclick="currentSlide(4)" alt="Historic Kyoto Temple">
+            </div>
+            <div class="column">
+                <img class="demo" src="./assets/images/Kyoto Garden.jpg" onclick="currentSlide(5)" alt="Beautiful Kyoto Garden">
+            </div>
+            <div class="column">
+                <img class="demo" src="./assets/images/Kyoto Street.jpg" onclick="currentSlide(6)" alt="Architectural Streets of Kyoto">
+            </div>
         </div>
 
-        <div class="slide fade">
-            <img src="./assets/images/Kyoto Street.jpg" alt="Architectural Streets of Kyoto">
-            <h3>Architectural Streets of Kyoto</h3>
-        </div>
-
-                    <!-- Navigation arrows -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-
-       <!-- Thumbnail images for navigation -->
-    <div class="row">
-        <div class="column">
-            <img class="demo" src="./assets/images/Kinkaku-ji.jpg" onclick="currentSlide(1)" alt="Kinkaku-Ji Temple">
-        </div>
-        <div class="column">
-            <img class="demo" src="./assets/images/Garden2.jpg" onclick="currentSlide(2)" alt="Kyoto Garden">
-        </div>
-        <div class="column">
-            <img class="demo" src="./assets/images/Gion Festival.jpg" onclick="currentSlide(3)" alt="Gion Festival">
-        </div>
-        <div class="column">
-            <img class="demo" src="./assets/images/Kyoto Temple.jpg" onclick="currentSlide(4)" alt="Historic Kyoto Temple">
-        </div>
-        <div class="column">
-            <img class="demo" src="./assets/images/Kyoto Garden.jpg" onclick="currentSlide(5)" alt="Beautiful Kyoto Garden">
-        </div>
-        <div class="column">
-            <img class="demo" src="./assets/images/Kyoto Street.jpg" onclick="currentSlide(6)" alt="Architectural Streets of Kyoto">
-        </div>
-    </div>
-
-     <p>Marvel at the grandeur of <b>Kinkaku-ji</b>, the Golden Pavilion, a masterpiece of Zen architecture that reflects magnificently over the tranquil waters surrounding it. A symbol of Kyoto's deep-rooted spiritual traditions, it’s a must-see for any traveler.</p>
-    
-     <p>Wander through <b>Kyoto’s exquisite gardens</b>, where every stone and plant is meticulously placed, embodying the principles of balance and harmony that define traditional Japanese landscaping. These serene spaces offer a peaceful retreat from the modern world.</p>
+        <p>Marvel at the grandeur of <b>Kinkaku-ji</b>, the Golden Pavilion, a masterpiece of Zen architecture that reflects magnificently over the tranquil waters surrounding it. A symbol of Kyoto's deep-rooted spiritual traditions, it’s a must-see for any traveler.</p>
         
-     <p>Feel the pulse of history come alive at the <b>Gion Festival</b>, one of Japan’s oldest and most vibrant cultural celebrations. The festival’s colorful processions and centuries-old traditions reflect the city's enduring spirit, making it a truly unforgettable experience.</p>
-    
-</section>
-<div class="video-container">
-    <iframe src="https://www.youtube.com/embed/AY5qcIq5u2g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-
-<footer>
-    <div>
-        <span>Copyright &copy; 2024 All Rights Reserved</span>
-        <br><br>
-        <div class="footer-social-icons">
-            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
-                <i class="fab fa-youtube"></i>
-            </a>
-        </div>
+        <p>Wander through <b>Kyoto’s exquisite gardens</b>, where every stone and plant is meticulously placed, embodying the principles of balance and harmony that define traditional Japanese landscaping. These serene spaces offer a peaceful retreat from the modern world.</p>
+            
+        <p>Feel the pulse of history come alive at the <b>Gion Festival</b>, one of Japan’s oldest and most vibrant cultural celebrations. The festival’s colorful processions and centuries-old traditions reflect the city's enduring spirit, making it a truly unforgettable experience.</p>
+        
+    </section>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/AY5qcIq5u2g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-</footer>
-
-
+    <footer>
+        <div>
+            <span>Copyright &copy; 2024 All Rights Reserved</span>
+            <br><br>
+            <div class="footer-social-icons">
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
 <!-- Link to JavaScript file -->
 <script src="./assets/main.js" defer></script>
