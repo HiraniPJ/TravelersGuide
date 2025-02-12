@@ -155,7 +155,7 @@ I know I am done when users can fill out and submit a contact form to inquire ab
 1. Open GitHub and navigate to the repository.
 2. Click the Code button and copy the repository URL.
 3. Open your terminal and use the following command:
-     - git clone https://github.com/your-username/repository-name.git
+     - git clone https://hiranipj.github.io/TravelersGuide/
         
 ### Local Deployment:
 1. Open the cloned repository in a code editor.
@@ -168,18 +168,6 @@ I know I am done when users can fill out and submit a contact form to inquire ab
 3. Set the source to Main Branch.
 4. After a few minutes, the website will be live. The URL can be found in the GitHub Pages section.
 
-## Credits
-### Content
-  - All content regarding the services, tours, and cultural experiences was provided by [Your Company Name].
-
-### Media
-  - Images of Kyoto's landmarks were sourced from [Image Source].
-  - The videos embedded on the website are sourced from YouTube’s [Kyoto Travel Channel].
-
-### Acknowledgements
-  - Special thanks to [Team/Individuals] for providing guidance during the development of the website.
-
-
 ## Future Improvements
 ### 1. Additional Services:
   We plan to introduce more service options such as food tours and adventure travel.
@@ -189,3 +177,16 @@ I know I am done when users can fill out and submit a contact form to inquire ab
 
 ### 3. Multi-language Support:
   Expand the website to support multiple languages, catering to a broader audience of travelers.
+
+## Credits
+### Content
+  - All content regarding the services, tours, and cultural experiences was provided by youtube videos & google searches.
+
+### Media
+  - Images of Kyoto's landmarks were sourced from unsplash.com.
+  - The videos embedded on the website are sourced from YouTube’s Peaceful Relaxation 4K Channel.
+
+### Acknowledgements
+  - Special thanks to slack team & code institute for providing support & guidance during the development of the website.
+
+
