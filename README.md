@@ -149,6 +149,7 @@ I know I am done when users can fill out and submit a contact form to inquire ab
 
 - ### Performance Testing
     Tested using Lighthouse
+  
   ![image](https://github.com/user-attachments/assets/da76c0d3-1d6d-42b2-a9ca-e4f3f78b50d7)
   
 ## Manual Testing
