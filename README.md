@@ -88,32 +88,44 @@ I know I am done when users can fill out and submit a contact form to inquire ab
   - A clear call-to-action button that directs users to explore services.
 - ### Responsive Design:
   - The homepage is fully responsive, adjusting images and text to fit mobile, tablet, and desktop screens.
+
+  ![image](https://github.com/user-attachments/assets/80c079f3-94da-44fb-b228-0489a71f76df)
     
 ### 2. Navigation
 - ### Mobile-Friendly:
   - The navigation bar collapses into a hamburger menu on smaller screens to maintain a clean and user-friendly interface.
 - ### Fixed Navigation Bar:
   - The navigation remains fixed at the top of the page, allowing users to easily access other sections regardless of where they are on the page.
+ 
+  ![image](https://github.com/user-attachments/assets/c3a70026-f948-43b2-abdd-7723d09cad40)
 
 ### 3. Services Page
 - ### Service Cards:
   - Each card represents a specific service, with images and brief descriptions of guided tours, cultural experiences, and travel planning.
   - The cards are interactive, changing color and adding a hover effect for an engaging user experience.
 
+ ![image](https://github.com/user-attachments/assets/029d0b1e-96bd-422b-881a-1c42f0a19c24)  |  ![image](https://github.com/user-attachments/assets/e3081d86-d71c-46fe-9543-08fcc8f8d1e7)
+
 ### 4. Image Carousel and Video
 - ### Image Carousel:
   - The portfolio page features a carousel showcasing images of Kyoto's top attractions. The carousel smoothly transitions between images, creating an immersive experience for the user.
+ 
+  ![image](https://github.com/user-attachments/assets/e97ed517-2c35-4ccf-9225-0a6fc9e69720)
+  
 - ### Embedded Video:
   - A YouTube video is embedded in the portfolio page, offering users a visual tour of Kyoto’s landmarks.
+    ![image](https://github.com/user-attachments/assets/28e0ce54-f97a-4b94-8bd7-b8808cbea325)
 
 ### 5. Forms
 - ### Booking Forms:
   - The website features three separate forms: one for booking guided tours, one for booking cultural experiences, and another for customizing trips.
    - The forms are simple and easy to fill out, with clear labels and placeholders for all required fields.
+     ![image](https://github.com/user-attachments/assets/3c06ac4c-8e26-4e29-b89d-64619c159cf9)
 
 ### 6. Contact Section
 - ### Contact Information:
   - The contact page provides users with the company's phone number, email address, office address, and operating hours. Users can also fill out a form to submit inquiries or book services.
+    ![image](https://github.com/user-attachments/assets/b4dea4ce-d772-4958-8a1d-21540af31d3f)
 
 ### 7. Footer
   - The footer includes links to the main pages, the website’s social media profiles, and external resources.
