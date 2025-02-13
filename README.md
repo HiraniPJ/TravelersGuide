@@ -61,23 +61,29 @@ so that I can get further information or ask questions about their services.
 I know I am done when users can fill out and submit a contact form to inquire about services.
 
 # Wireframes
-[Include wireframe images here]
 
 ## Index Page Design
 ### User Story Number: 1, 7, 8
 - The homepage features an introduction to Kyoto with stunning images and a call-to-action button that guides users to more detailed information about available tours and experiences.
+ ![image](https://github.com/user-attachments/assets/a73993d7-3e8b-4e53-8d10-fce5cea41d35)
 
 ## Services Page Design
 ### User Story Number: 2, 3, 5
 - The services page showcases various tour and experience options in a grid layout. Each card features an image, description, and link to the booking form.
+![image](https://github.com/user-attachments/assets/11a86d38-57c4-472f-95aa-dbc9787b8a0a)
 
 ## Portfolio Page Design
 ### User Story Number: 1, 6
 - The portfolio page highlights Kyoto’s famous landmarks with an image carousel and video embed, allowing users to visually explore popular destinations.
+  ![image](https://github.com/user-attachments/assets/e19289b9-4e29-496a-b7ae-9860c5d7878e)
+
 
 ## Contact Page Design
 ### User Story Number: 9
 - The contact page includes a detailed form where users can reach out for inquiries, book guided tours, or customize their travel plans.
+![image](https://github.com/user-attachments/assets/381e5a3b-05d0-413d-85d2-67f5366b22fd)
+
+  
 -------
 
 ## Features
