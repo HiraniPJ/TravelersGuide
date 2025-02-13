@@ -77,8 +77,8 @@ I know I am done when users can fill out and submit a contact form to inquire ab
 ## Portfolio Page Design
 ### User Story Number: 1, 6
 - The portfolio page highlights Kyoto’s famous landmarks with an image carousel and video embed, allowing users to visually explore popular destinations.
-  
-  ![image](https://github.com/user-attachments/assets/e19289b9-4e29-496a-b7ae-9860c5d7878e)
+
+![image](https://github.com/user-attachments/assets/e19289b9-4e29-496a-b7ae-9860c5d7878e)
 
 
 ## Contact Page Design
