@@ -2,7 +2,7 @@
 Explore Kyoto is a travel guide website that provides users with valuable insights, tips, and resources to explore the cultural and historical beauty of Kyoto, Japan. This website aims to help visitors plan their trips by offering detailed information about tours, experiences, and trip customization options. Users can interact with the website by booking guided tours, cultural experiences, or fully customized trips, all while navigating through a visually engaging interface.
 
 ## Responsive Mockup
-[Include an image of the mockup here]
+![image](https://github.com/user-attachments/assets/625aec0e-f6aa-48b7-b60f-ddf57af088db)
 
 ## User Stories
 ### Story No. | Story
@@ -131,7 +131,14 @@ I know I am done when users can fill out and submit a contact form to inquire ab
   **Error**
   ![image](https://github.com/user-attachments/assets/1a440957-bfa9-4418-b01e-9b75870410d0)
 
+  **solved**
+    All errors have been solved. The error showing below is of external css file. 
+![image](https://github.com/user-attachments/assets/c44f3025-e05c-4bc1-bd9a-226a75802391)
 
+- ### Performance Testing
+    Tested using Lighthouse
+  ![image](https://github.com/user-attachments/assets/da76c0d3-1d6d-42b2-a9ca-e4f3f78b50d7)
+  
 ## Manual Testing
 ### 1. Browser Compatibility:
   - The website was tested in multiple browsers including Google Chrome, Firefox, and Safari. It performed consistently across all platforms.
